@@ -29,8 +29,7 @@ if ($answer -eq [System.Windows.Forms.DialogResult]::Yes) {
 @echo off
 cd C:\Users\Public
 timeout /t 5 /nobreak > nul
-del /s /q lule
-rmdir lule
+powershell rm -Recurse -Force lule
 del "%~f0"
 "@
 
